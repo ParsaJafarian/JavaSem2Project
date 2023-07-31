@@ -3,6 +3,11 @@
 ## Introduction
 This is my java project in my second semester of cégep at Vanier, Montreal Qc. It assesses my competencies in Java, data structures and algorithms and OOP. The goal of the project is to create a program that manages a college's departments and employees. The program is run through the console and uses serialization to save data. The program is structured in a way that allows the user to implement all CRUD(Create, Read, Update, Delete) functionalities. The data structure part of the course comes in with the decision of choosing which data structure to store the employees and departments. In this project, arraylist was chosen for its simple sorting with comparators. The Object oriented programming  of this course was implemented by creating the right class hierarchy and relationships to ensure an error-free program. The program is also tested to ensure its stability
 
+### How to Run
+1. git clone this repository
+2. Open repository as a Java project folder using an IDE
+3. Run `main.java`
+
 ### Application Structure
 **Input Map**
 

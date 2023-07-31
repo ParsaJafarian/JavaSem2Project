@@ -1,0 +1,160 @@
+public class Main {
+
+    void displayDepartments(ArrayList<Department> departments) {
+        for i=0 to i = size -1 {
+            print each department and its current index in the arraylist
+        }
+    }
+
+    void displayDepartment(Department department) {
+
+        loop through all of department's staff if the list of staff is not empty{
+            print each staff with its corresponding index
+        }
+
+        loop through all the department's teachers if the list of teachers is not empty {
+            print each teacher and its index
+        }
+    }
+
+    void addDepartment(ArrayList<Department> departments, Scanner scanner) {
+        take a string as input with scanner
+
+        if none of the departments' names match the string input {
+            create and add new department with the given name to departments
+        } else throw exception
+
+    }
+
+    void addStaff(Department department, Scanner scanner) {
+        Use scanner.nextLine() to get string inputs for all attributes
+        int id = acceptInt(scanner)
+        int workload = -1;
+        while( workload is not valid (it not in range (0,40] ) {
+            workload = acceptInt(scanner)
+        }
+        //Code above is to make sure the workload is correct
+
+        department.addStaff( new Staff with inputted attributes)
+    }
+
+    void addTeacher(Department department, Scanner scanner) {
+       int input
+       scanner.nextLine() for string inputs
+       acceptInt for integer inputs
+
+       String degree = null
+       while(degree == null) {
+            String ans = scanner.nextLine();
+            if(ans is a valid degree) degree = ans
+       }
+
+       boolean isDean
+       do {
+        input = acceptInput
+       } while input is not 0 and is not 1
+       isDean = input == 1;
+
+       same logic above for the boolean value of fullTime
+
+       if(fullTime) add new FullTime teacher to the department
+       else{
+            accept hours as long as they're valid ( in range of (0,40] )
+            add new PartTime teacher with the workHours inputted
+       }
+    }
+
+    void removeDepartment(ArrayList<Department> departments, Scanner scanner) {
+        if (department is empty) print it's empty and do nothing
+        else {
+            print(Enter the index of the department you want to remove)
+            int i
+            do {
+                i = acceptInt(scanner)
+            } while ( i < 0 || i >= departments.size())
+
+            departments.remove(i)
+        }
+    }
+
+    void removeStaff(Department department, Scanner scanner){
+        if(list of staff is empty) do nothing
+        else {
+            Just like removeDepartment, check if the index inputted is valid
+            department.getStaff().remove(i)
+        }
+    }
+
+    void removeTeacher(Department department,Scanner scanner) {
+        if teachers is empty do nothing
+        else {
+            Check index input just like removeDepartment
+        }
+        department.removeTeacher(i)
+    }
+
+    Department getDepartment(ArrayList<Department> departments, Scanner scanner) {
+        if(departments is empty) {
+            return null
+        }
+        Check index input just like removeDepartment
+
+        return departments.get(i)
+    }
+
+    void inspectDepartment(Department department, Scanner scanner) {
+        int input
+        do {
+        displayDepartment(department);
+        print("0(back) 1(add staff) 2(remove staff) 3(add teacher) 4(remove teacher)");
+        print("5 (sort by name) 6(sort by age) 7(sort by address) 8(sort by salary) 9(sort by deans)");
+
+        implement the options above as a switch case depending on the user input that uses acceptInt(scanner)
+
+        } while input != 0
+    }
+
+    int acceptInt(Scanner scanner) {
+        int input
+        while(true){
+            try {
+                scanner.nextInt()
+                break
+            }
+            catch (Exception thrown due to the input being string) {
+                print(invalid)
+                scanner.nextLine()
+            }
+        }
+        return input
+    }
+
+    public static void main(String[] args) throws IOException {
+        Load the data text file and create an instance of it
+        ArrayList<Department> departments = new Departments()
+
+        if(file is empty) departments = deserialize()
+        else departments = new arrayList<Departments>
+
+        int input
+        loop:
+        while (true) {
+            display command options
+
+            input = acceptInt(scanner)
+
+            implement switch case depending on the input {
+                case 0 -> {
+                    sort the departments based on hasDean
+                    if(departments is not empty and the first department doesn't have a dean) {
+                        print error and continue the loop
+                    } else break loop;
+                }
+                //other cases after
+            }
+        }
+        serialize(departments)
+        scanner.close();
+    }
+
+}

@@ -1,0 +1,5 @@
+public class FullTime extends Teacher {
+    computePayRoll(){
+        return 32 * degreeRate * 2 * 0.85
+    }
+}

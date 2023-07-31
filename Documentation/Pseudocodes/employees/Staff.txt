@@ -1,0 +1,17 @@
+public class Staff extends Person {
+    attributs of duty and workload
+
+    boolean validWorkload(){
+        return workload < 40 && workload >= 0
+    }
+
+    void setWorkload(){
+        if(validWorkload) set the workload
+    }
+
+    Comparator based on workload
+
+    computePayRoll(){
+        return workload * 32 * 2 * 0.75
+    }
+}

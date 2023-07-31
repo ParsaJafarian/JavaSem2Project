@@ -1,0 +1,7 @@
+abstract class Person implements Serializable, Payroll {
+    attributes of name,address,email,phone and id
+
+    public abstract computePayRoll()
+
+    Multiple Comparators based on each attribute
+}

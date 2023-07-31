@@ -1,0 +1,38 @@
+public abstract class Teacher extends Person{
+    protected attributes of specialty, degree and isDean
+
+    constructors
+
+    public static boolean validDegree(String name){
+        for every education in Education.values {
+            if (education.name contains name) return true
+        }
+        print error message
+        return false
+    }
+
+    public void setDegree(String name){
+         for each education in Education.values {
+             if (education.name contains name){
+                degree = education
+                break
+             }
+        }
+    }
+
+    public abstract double computePayroll()
+
+    protected Enum Education{
+        Master and its associated rate
+        Bachelor and its rate
+        Phd and its rate
+
+        constructor
+
+        getRate()
+    }
+
+    public static final isDean comparator implements comparator<Teacher>{
+        compareTo() based on isDean boolean values
+    }
+}

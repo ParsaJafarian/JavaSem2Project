@@ -1,0 +1,11 @@
+public class PartTime extends Teacher {
+    hoursWorked
+
+    validHoursWorked(int hoursWorked){
+        return hoursWorked < 40 && hoursWorked >= 0
+    }
+
+    computePayRoll(){
+        return  hoursWorked * degreeRate * 2 * 0.76
+    }
+}

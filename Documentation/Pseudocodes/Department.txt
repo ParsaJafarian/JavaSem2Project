@@ -1,0 +1,23 @@
+public class Department implements Serializable{
+    addTeacher(Teacher teacher){
+        if no teacher in teachers has the same id as teacher {
+            if teacher is dean and the department has no dean{
+                teacher becomes dean
+                hasDean = true
+            }
+            else if teacher is dean but department has dean {
+                teacher is not a dean but still gets added
+            }
+            add the teacher to teachers
+        } else throw exception
+    }
+
+    addStaff(Staff staff){
+        if no staff in staffs has the same id as staff {
+            add the new staff
+        } else throw exception
+    }
+
+    Comparators based on size, name and hasDean of Departments
+
+}
